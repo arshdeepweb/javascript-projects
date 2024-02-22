@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  color: rgb(0, 132, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(210, 241, 255);
+  color: rgb(0, 132, 255);
+  align-items: center;
+  height: 10vh;
+  padding: 0 0.7rem;
+}
+
+.left-nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.left-nav a{
+  text-decoration: none;
+  color: rgb(0, 132, 255);
+  margin-left: 1.2rem;
+}
+
+#search{
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
+  border: 2px solid rgb(0, 132, 255);;
+  border-radius: 0.4rem;
+}
+
+#search-btn{
+  padding: 0.3rem 0.7rem;
+  font-size: 1.5rem;font-size: 1rem;
+  background: transparent;
+  border: 2px solid rgb(0, 132, 255);
+  border-radius: 0.4rem;
+  color: rgb(0, 132, 255);
+  transition: 0.8s all ease-in-out;
+  cursor: pointer;
+}
+
+#search-btn:hover{
+  background: rgb(0, 132, 255);
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.main{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.add-note-section{
+  display: flex;
+  justify-content: center;
+}
+
+.add-notes{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#write-note{
+  width: 60vw;
+  border: 2px solid rgb(0, 132, 255);
+  border-radius: 1rem;
+  margin: 0.6rem 0;
+  padding: 0.7rem;
+  font-size: 1rem;
+}
+
+
+
+hr{
+  height: 2px;
+  width: 63vw;
+}
+
+#add-note-btn{
+  padding: 0.3rem 0.7rem;
+  font-size: 1.5rem;font-size: 1rem;
+  background-color: rgb(0, 132, 255);
+  border: 2px solid rgb(0, 132, 255);
+  border-radius: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#add-note-btn:hover{
+  background: rgb(6, 68, 126);
+  transition: 0.8s all ease-in-out;
+}
+.note-cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 65vw;
+}
+
+.card{
+  border: 2px solid rgb(0, 132, 255);
+  border-radius: 0.7rem;
+  width: 11vw;
+  margin: 0.4rem;
+  padding: 0.3rem;
+}
+
+#delete-note-btn{
+  padding: 0.3rem 0.3rem;
+  font-size: 1.5rem;font-size: 1rem;
+  background-color: rgb(0, 132, 255);
+  border: 2px solid rgb(0, 132, 255);
+  border-radius: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#delete-note-btn:hover{
+  background: rgb(6, 68, 126);
+  transition: 0.8s all ease-in-out;
+}

@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#heading{
+  text-align: center;
+  margin-top: 1rem;
+  
+}
+
+#add-notes{
+  text-align: center;
+}
+
+
+#add-notes{
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#to-do-input{
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+
+#to-do-date{
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+
+#add-btn{
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+
+.item-container div{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  
+  
+
+}
+
+.item-container span{
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  text-transform: capitalize;
+  margin: 0 1rem;
+}
+
+
+.item-container button{
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+
+.check{
+  text-decoration: line-through;
+}
+
