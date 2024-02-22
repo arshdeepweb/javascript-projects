@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgb(255, 240, 211);
+}
+
+#game{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+#btn1{
+  padding: 2rem;
+  font-size: 2rem;
+  background-color: rgb(238, 194, 241);
+  border: 2px solid  transparent;
+  border-radius: 30%;
+  color: rgb(141, 100, 160);
+  
+}
+
+#btn2{
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: rgb(141, 100, 160);
+  border: 2px solid  transparent;
+  border-radius: 30%;
+  color: rgb(238, 194, 241);
+  margin: 0 1.5rem;
+}
+
+#btn3{
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: rgb(145, 215, 255);
+  border: 2px solid  transparent;
+  border-radius: 30%;
+  color: rgb(141, 100, 160);
+  
+}
+
+.user-selec{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.comp-selec{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+
+.points{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-det{
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem 0 0;
+  text-align: center;
+}
+
+.user{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  
+  
+}
+
+.comp{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  
+}
+
+.comp-det{
+  text-align: center;
+}
+
+.selection{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  border-radius: 2rem;
+}
+
+.show-points{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.win-show{
+  background-color: rgb(67, 168, 67);
+  color: rgb(255, 255, 255);
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+}
+
+.draw-show{
+  background-color: rgb(243, 208, 53);
+  color: rgb(255, 255, 255);
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+}
+
+.loss-show{
+  background-color: rgb(182, 37, 37);
+  color: rgb(255, 255, 255);
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+}

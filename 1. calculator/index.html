@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Calculator</title>
+  <style>
+    body{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding-top: 70px;
+  background-color: #a1cff5;
+}
+.calculator{
+  border:2px solid #1d3849;
+  width: 220px;
+  color: #a2bbcf;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  background-color: #1d3849;
+}
+
+button{
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  
+}
+
+#display{
+  margin: -10px 5px 15px 5px;
+  width: 180px;
+  font-size: 25px;
+  border-radius: 15px;
+  background-color: #a2bbcf;
+  color: #142f44;
+  border: 1px solid lightsteelblue;
+}
+
+.btn1{
+  background-color: #a2bbcf;
+  color: #142f44;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.btn2{
+  background-color: 	#205b7a;
+  color: white;
+  border: 1px solid 	#205b7a;
+  border-radius: 5px;
+}
+.btn3{
+  background-color: #005ca3;
+  color: white;
+  border: 1px solid #005ca3;
+  border-radius: 5px;
+}
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Calculator</h1>
+    <input type="text" id="display" readonly>
+    <div class="calc-btn">
+      <button class="btn2" onclick="showbutton('(')">(</button>
+      <button class="btn2" onclick="showbutton(')')">)</button>
+      <button class="btn2" onclick="backspace()">⌫</button>
+      <button class="btn2" onclick="clearResult()">AC</button>
+      <button class="btn1" onclick="showbutton('7')">7</button>
+      <button class="btn1" onclick="showbutton('8')">8</button>
+      <button class="btn1" onclick="showbutton('9')">9</button>
+      <button class="btn2" onclick="showbutton('/')">/</button>
+      <button class="btn1" onclick="showbutton('4')">4</button>
+      <button class="btn1" onclick="showbutton('5')">5</button>
+      <button class="btn1" onclick="showbutton('6')">6</button>
+      <button class="btn2" onclick="showbutton('*')">*</button>
+      <button class="btn1" onclick="showbutton('1')">1</button>
+      <button class="btn1" onclick="showbutton('2')">2</button>
+      <button class="btn1" onclick="showbutton('3')">3</button>
+      <button class="btn2" onclick="showbutton('-')">-</button>
+      <button class="btn1" onclick="showbutton('0')">0</button>
+      <button class="btn1" onclick="showbutton('.')">.</button>
+      <button class="btn3" onclick="result()">=</button>
+      <button class="btn2" onclick="showbutton('+')">+</button>
+    </div>
+  </div>
+
+  <script>
+    function showbutton(value){
+      document.querySelector("#display").value +=value;
+    }
+
+    function clearResult(){
+      document.getElementById('display').value ='';
+
+    }
+
+    function result(){
+      document.querySelector("#display").value = eval(document.querySelector("#display").value)
+    }
+
+    function backspace(){
+      document.querySelector("#display").value = document.querySelector("#display").value.slice(0, -1);
+    }
+  </script>
+  
+</body>
+</html>
