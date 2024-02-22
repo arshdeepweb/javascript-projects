@@ -53,7 +53,7 @@ let showOutput = document.querySelector(".show-result p");
 
 let fetchCurrency =  async (e) =>{
   let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${fromInput.value.toLowerCase()}/${toInput.value.toLowerCase()}.json`
-  console.log(e);
+  
 
   let promise = await fetch(url);
   let response = await promise.json();
@@ -61,7 +61,7 @@ let fetchCurrency =  async (e) =>{
 
   let newHtml = `${e} ${fromInput.value} to ${Math.round(response[toInput.value.toLowerCase()])*e} ${toInput.value}`
  
-  showInput.innerText = newHtml;
+  showOutput.innerText = newHtml;
  
 }
 
