@@ -21,7 +21,7 @@ let checkWeather = async(city) =>{
   console.log("response...");
   let response = await weatherApi.json();
   console.log(response)
-  temperature.innerText = Math.floor(response.main.temp);
+  temperature.innerText = Math.round(response.main.temp);
   wind.innerText = response.wind.speed;
   humidity.innerText = response.main.humidity;
   long.innerText = Math.floor(response.coord.lon);
