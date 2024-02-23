@@ -3,6 +3,7 @@ let addBtn = document.querySelector("#add-note-btn");
 let displayNotes = document.querySelector(".note-cards");
 let searchNotes = document.querySelector("#search");
 
+// Step 1 get and show the notes to load the page
 
 let allNotes = [];
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
 });
+
+// Step 2 click the button and add the value to array and local storage
 
 addBtn.addEventListener("click", () => {
   let addNote = writeNote.value;
@@ -31,6 +34,8 @@ addBtn.addEventListener("click", () => {
   showNotes();
 });
 
+// Step 3 Show the Notes 
+
 function showNotes(){
   let newHtml = "";
 
@@ -48,12 +53,15 @@ function showNotes(){
   displayNotes.innerHTML = newHtml;
 };
 
+// Step 4 Delete the notes
 
 let deleteItem = (index) =>{
   allNotes.splice(index, 1);
   localStorage.setItem("notes", JSON.stringify(allNotes));
   showNotes();
 }
+
+// Step 5 add search functionality 
 
 searchNotes.addEventListener("input", ()=>{
   let searchInput = searchNotes.value.toLowerCase();

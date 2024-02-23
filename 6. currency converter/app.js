@@ -3,6 +3,7 @@ let convertBtn = document.querySelector("#conv-btn");
 let fromInput = document.querySelector(".from select");
 let toInput = document.querySelector(".to select");
 
+//Step 1 select the selectInput and show the countryList Items
 
 
 for(let select of countrySelect){
@@ -21,10 +22,14 @@ for(let select of countrySelect){
     
   }
 
+  // Step 2 select the option to SelectInput 
+
   select.addEventListener("change", (evt)=>{
     showImg(evt.target);
   })
 }
+
+// Step 3 Fetch and show the country image
 
 let showImg = (element)=>{
 
@@ -36,7 +41,11 @@ let showImg = (element)=>{
 }
 
 
-let apiKey = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/";
+
+
+// let apiKey = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/";
+
+// Step 4 get the input value and convert the currency
 
 convertBtn.addEventListener("click", async (e)=>{
   let inputVal = document.querySelector(".amount input").value;
@@ -48,6 +57,8 @@ convertBtn.addEventListener("click", async (e)=>{
   fetchCurrency(inputVal)
 
 })
+
+// step 5 fetch the latest currency rates and show 
 
 let showOutput = document.querySelector(".show-result p");
 
@@ -66,4 +77,3 @@ let fetchCurrency =  async (e) =>{
 }
 
 
-//

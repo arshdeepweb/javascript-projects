@@ -3,6 +3,8 @@
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 let apiKey = "&appid=e728150f716295ef12b38b0dfd99b78c";
 
+// Step 1 intialize the elements
+
 let searchBtn = document.querySelector("#search-btn")
 let temperature = document.querySelector("#temp");
 let wind = document.querySelector("#wind");
@@ -13,6 +15,7 @@ let weatherDesc = document.querySelector("#weather-description");
 let showCity = document.querySelector(".show-city");
 let secondContainer = document.querySelector("#mini-container")
 
+// Step 2 fetch and show the weather and all elements 
 
 let checkWeather = async(city) =>{
   let url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=e728150f716295ef12b38b0dfd99b78c`;
@@ -40,6 +43,8 @@ let checkWeather = async(city) =>{
   // console.log(weatherDesc);
 }
 
+// Step 3 click the button and call the checkWeather function 
+
 searchBtn.addEventListener("click", ()=>{
   console.log("hi");
 
@@ -53,7 +58,7 @@ let d = new Date();
 let time = d.getHours();
 console.log(time)
 
-
+// Step 4 show the image to match the weather
 
 let showImg = (img) => {
   let showImage = document.querySelector("#show-image");
@@ -74,37 +79,3 @@ let showImg = (img) => {
     }
   }
 }
-
-
-
-// let showImg = (img) => {
-//   let showImage = document.querySelector("#show-image");
-  
-//   switch (img) {
-//     case "snow":
-//       showImage.src = "media/snow.png";
-//       break;
-//     case "clouds":
-//     case "smoke":
-//     case "haze":
-//     case "dust":
-//     case "fog":
-//     case "sand":
-//       showImage.src = "media/cloudy.png";
-//       break;
-//     case "rain":
-//     case "thunderstorm":
-//       showImage.src = "media/raining.png";
-//       break;
-//     case "drizzle":
-//       showImage.src = "media/storm.png";
-//       break;
-//     default:
-//       if (time > 19 || time < 4) {
-//         showImage.src = "media/moon.png";
-//       } else if (time > 4 && time < 18) {
-//         showImage.src = "media/sun.png";
-//       }
-//       break;
-//   }
-// }
