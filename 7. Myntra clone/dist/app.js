@@ -16,17 +16,20 @@ function onLoad(){
 
 function showProducts(){
   let newHtml = "";
+  if(!containerItems){
+    return;
+  }
 
 
   items.forEach(item =>{
 
-    newHtml += `<div class="w-[220px]  m-10">
+    newHtml += `<div class="w-[220px]  m-10" id="card">
     <img src="${item.image}" alt="">
     <div class="font-bold text-sm my-1">
       ${item.rating.stars} ⭐ | ${item.rating.count}
     </div>
-    <div class="font-bold text-lg my-1">${item.company}</div>
-    <div class="font-sans text-slate-600 text-sm my-1">${item.item_name}</div>
+    <div class="font-bold text-lg my-1" id="company-name">${item.company}</div>
+    <div class="font-sans text-slate-600 text-sm my-1" id="item-name">${item.item_name}</div>
     <div class="my-1">
       <span class="font-bold text-sm">Rs.${item.current_price}</span>
       <span class="text-gray-500 text-[12px] line-through">Rs ${item.original_price}</span>
@@ -73,3 +76,32 @@ let addToCart = (itemId) =>{
   localStorage.setItem("BagItems", JSON.stringify(bagCountItem))
   console.log(bagCountItem);
 }
+
+
+
+let inputSearch = document.getElementById("input-search");
+
+if (inputSearch.nodeType === 1){
+  inputSearch.addEventListener("input", ()=>{
+  
+    let allCards = document.querySelectorAll("#card");
+  
+    let inputValue = inputSearch.value.toLowerCase();
+    Array.from(allCards).forEach((element) =>{
+      let itemName = element.querySelector("#item-name").innerText.toLowerCase();
+      let itemCompanyName = element.querySelector("#company-name").innerText.toLowerCase();
+  
+     
+      
+  
+      if(itemName.includes(inputValue) || itemCompanyName.includes(inputValue)){
+        
+        element.style.display = "block";
+      } else {
+        
+        element.style.display = "none";
+      }
+    })
+  })
+}
+
