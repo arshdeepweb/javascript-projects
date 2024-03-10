@@ -105,3 +105,15 @@ if (inputSearch.nodeType === 1){
   })
 }
 
+let nav = "show";
+let hamBurger = document.getElementById("ham-burger");
+let showNav = document.getElementById("show-nav")
+hamBurger.addEventListener("click", ()=>{
+  if(nav == "show"){
+    showNav.style.display = "block";
+    nav = "hide";
+  }else{
+    showNav.style.display = "none";
+    nav = "show";
+  }
+})

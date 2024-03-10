@@ -12,12 +12,19 @@
   <navbar class="">
     <div class="h-16 shadow-md bg-white sticky top-0">
     <nav class="flex justify-evenly m-4  ">
-      <div>
-        <img src="./media/logo.png" alt="logo" width="70rem">
+      <div class="text-5xl inline lg:hidden" id="ham-burger">
+        &#8801;
       </div>
 
-      <div class="font-sans text-slate-900 ">
-        <ul class="lg:flex justify-between font-bold text-sm word items-center mt-3 lg:text-sm hidden flex-col lg:flex-row ">
+
+      <div>
+        <img src="../media/logo.png" alt="logo" width="70rem">
+      </div>
+
+      <div class="lg:flex flex-col justify-evenly lg:flex-row items-start hidden left-[-100px] bg-white lg:bg-transparent p-8 lg:p-0" id="show-nav" style="transition: all 1s ease-out;">
+
+      <div class="font-sans text-slate-900 mr-8">
+        <ul class="lg:flex justify-between font-bold text-sm word items-center mt-3 lg:text-sm flex-col lg:flex-row ">
           <li class="m-3 mt-0">MEN</li>
           <li class="m-3 mt-0">WOMEN</li>
           <li class="m-3 mt-0">KIDS</li>
@@ -29,10 +36,11 @@
 
       <div class="bg-gray-100 px-0 py-0 rounded-md  flex justify-center items-center border-none h-[2.7rem] ">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search Products" class="bg-transparent w-[14rem] outline-none p-1 ml-2 md:w-[30rem]" >
+        <input type="text" placeholder="Search Products" id="input-search" class="bg-transparent w-[10rem] outline-none p-1 ml-2 md:w-[30rem]" >
       </div>
 
-      <div class="lg:flex justify-between w-[10rem] hidden ">
+    </div>
+      <div class="flex justify-between w-[10rem] flex-row ">
         <div class="text-center">
           <i class="fa-regular fa-user"></i>
           <p>User</p>
@@ -45,7 +53,7 @@
         </div>
 
         <div class="text-center">
-          <a href="#">
+          <a href="./pages/bag.html" target="_blank">
             <i class="fa-solid fa-bag-shopping"></i>
             <p>Bag</p>
             <span class=" bag-count">0</span>
@@ -55,9 +63,7 @@
 
 
 
-      <div class="text-5xl inline lg:hidden">
-        &#8801;
-      </div>
+      
 
     </nav>
   </div>
