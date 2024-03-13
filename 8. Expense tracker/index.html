@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <nav id="navbar">
+    <h1>Expense Tracker</h1>
+  </nav>
+  <main>
+
+    <div class="section-1">
+
+    <div class="add-item">
+      <div>
+        <h2 class="heading">Add New</h2>
+      </div>
+      <div>
+        <form action="">
+          <div class="form-label">
+          <label for="select-type" style="font-weight: 700;">Entry Type :
+            <select name="Entry Type" id="entry-type" value="select"> 
+              <option value="income">income</option>
+              <option value="expense">expense</option>
+            </select>
+          </label>
+        </div>
+        <br>
+        <div class="form-label">
+          <label for="name" style="font-weight: 700;"> Name :
+            <input type="text" id="name" placeholder="name">
+          </label>
+        </div>
+          <br>
+          <div class="form-label">
+          <label for="amount" style="font-weight: 700;"> Amount :
+            <input type="number" id="amount" placeholder="amount">
+          </label>
+            
+        </div><br>
+          <button id="submit-btn">Submit</button>
+        </form>
+        
+      </div>
+
+    </div>
+      <div class="add-item" id="balance-item" >
+        <div class="heading">
+          <h2>Balance : <span>0</span></h2>
+        </div>
+        <div id="show-amounts">
+          <div class="t-amount">
+            <h3>Total Income</h3>
+            <p>0</p>
+          </div>
+          <div>
+            <h3>Total Expense</h3>
+            <p>0</p>
+          </div>
+        </div>
+      </div>
+    
+
+  </div>
+
+  <section class=" table-sec">
+    <div class="">
+      <table id="table">
+        <thead>
+          <th>Sr. No</th>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Type</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="table-body">
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

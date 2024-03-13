@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#navbar{
+  text-align: center;
+  background-color: #58D68D;
+  color: #DFF5FF;
+  padding: 1rem;
+  font-size: 1.8rem;
+  
+}
+
+.section-1{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.add-item{
+  padding: 1rem;
+  border: 2px solid #58D68D;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  color: black;
+  box-shadow:0 4px 8px 0 #58D68D, 0 6px 20px 0 #58D68D;
+}
+
+.heading{
+  text-align: center;
+  margin: 1rem;
+}
+
+.form-label{
+  font-size: 1.2rem;
+}
+
+#entry-type{
+  padding: 0.7rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+#name{
+  padding: 0.7rem;
+  font-size: 1rem;
+  outline: none;
+  margin-left: 2rem;
+}
+
+#amount{
+  padding: 0.7rem;
+  font-size: 1rem;
+  outline: none;
+  margin-left: 1rem;
+}
+
+#submit-btn{
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+#show-amounts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.t-amount{
+  padding-right: 1rem;
+  text-align: center;
+  border-right: 2px solid gray;
+  margin-right: 1rem;
+}
+
+.table-sec{
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+table{
+  border: 1px solid #58D68D;
+  border-radius: 1rem;
+  box-shadow:0 4px 8px 0 #58D68D, 0 6px 20px 0 #58D68D;
+}
+
+thead{
+  background-color: #58D68D;
+}
+
+table, th, td {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+
+@media screen and (max-width:850px){
+  .section-1{
+    flex-direction: column-reverse;
+    margin: 3rem 3rem;
+    align-items: center;
+  }
+  .add-item{
+    margin: 3rem;
+  }
+  .balance-item{
+    padding: 4rem 2rem;
+  }
+
+  table{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  th, td {
+    font-size:1rem;
+    padding: 1rem ;
+  }
+  
+}
+
+
+@media screen and (min-width:580px) and (max-width:840px){
+
+  table{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  th, td {
+    font-size:1.2rem;
+    padding: 1.5rem ;
+  }
+  
+}
+
+@media screen and (min-width:300px) and (max-width:580px){
+
+  table{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  th, td {
+    font-size:1rem;
+    padding: 0.5rem;
+  }
+  
+}
