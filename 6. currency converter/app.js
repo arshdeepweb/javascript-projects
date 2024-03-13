@@ -60,19 +60,39 @@ convertBtn.addEventListener("click", async (e)=>{
 
 // step 5 fetch the latest currency rates and show 
 
+
+
 let showOutput = document.querySelector(".show-result p");
 
 let fetchCurrency =  async (e) =>{
-  let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${fromInput.value.toLowerCase()}/${toInput.value.toLowerCase()}.json`
+  // let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${fromInput.value.toLowerCase()}/${toInput.value.toLowerCase()}.json`
+
+  const url = `https://currency-converter-pro1.p.rapidapi.com/convert?from=${fromInput.value.toLowerCase()}&to=${toInput.value.toLowerCase()}&amount=${e}`;
+  const options = {
+      method: 'GET',
+      headers: {
+          'X-RapidAPI-Key': 'f84317269dmshfdc52c63f6016c0p1ee7adjsn8fc9abd24dd7',
+          'X-RapidAPI-Host': 'currency-converter-pro1.p.rapidapi.com'
+      }
+  };
   
+  try {
+      const response = await fetch(url, options);
+      const result = await response.json();
 
-  let promise = await fetch(url);
-  let response = await promise.json();
-
-
-  let newHtml = `${e} ${fromInput.value} to ${Math.round(response[toInput.value.toLowerCase()])*e} ${toInput.value}`
+      let newHtml = `${e} ${fromInput.value} to ${Math.round(result.result)} ${toInput.value}`
  
   showOutput.innerText = newHtml;
+  } catch (error) {
+      console.error(error);
+  }
+  
+
+  // let promise = await fetch(url);
+  // let response = await promise.json();
+
+
+  
  
 }
 
