@@ -4,10 +4,11 @@ let amount = document.querySelector("#amount");
 let submitBtn = document.querySelector("#submit-btn");
 let balanceItem = document.querySelector("#balance-item");
 let tableBody = document.getElementById("table-body");
-
+let totalIncome = document.getElementById("total-income");
+let totalExpense = document.getElementById("total-expenses");
+let totalBalance = document.getElementById("total-balance");
 
 let tableItems = [];
-
 
 
 submitBtn.addEventListener("click", ()=>{
@@ -16,10 +17,16 @@ submitBtn.addEventListener("click", ()=>{
   let itemAmount = amount.value;
   let itemType = type.value;
 
-  tableItems.push({itemName,itemAmount,itemType});
+  if(itemName != "" && itemAmount != ""){
+    tableItems.push({itemName,itemAmount,itemType});
   name.value = "";
   amount.value = "";
   showBalance();
+  showTotalBalance();
+  } else {
+    alert("Fill the input Boxes")
+  }
+  
 })
 
 
@@ -47,14 +54,41 @@ let showBalance = () => {
       <td>${showType(tableItems[i])} </td>
       <td onclick="deleteItem(${i})"><i class="fa-solid fa-trash-can"></i></td>
     </tr>`;
+
+    
   };
-  
   tableBody.innerHTML = newHtml;
 };
 
 let deleteItem = (delItem) =>{
   tableItems.splice(delItem, 1);
   showBalance();
+  showTotalBalance();
 }
 
 
+
+let showTotalBalance = () => {
+
+  let income = 0;
+  let expense = 0;
+  let balanceWallet = 0;
+
+  tableItems.forEach(item => {
+    if (item.itemType === "income") {
+      income += Number(item.itemAmount);
+    } else if (item.itemType === "expense") {
+      expense += Number(item.itemAmount);
+    }
+  });
+
+  balanceWallet = income - expense;
+
+  totalIncome.innerText = income;
+  totalExpense.innerText = expense;
+  totalBalance.innerText = balanceWallet;
+
+  // console.log("Income:", income);
+  // console.log("Expense:", expense);
+  // console.log("Balance:", balanceWallet);
+};

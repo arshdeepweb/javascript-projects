@@ -32,7 +32,7 @@
         <br>
         <div class="form-label">
           <label for="name" style="font-weight: 700;"> Name :
-            <input type="text" id="name" placeholder="name">
+            <input type="text" id="name" placeholder="name" autocomplete="off">
           </label>
         </div>
           <br>
@@ -50,16 +50,16 @@
     </div>
       <div class="add-item" id="balance-item" >
         <div class="heading">
-          <h2>Balance : <span>0</span></h2>
+          <h2>Balance : <span id="total-balance">0</span></h2>
         </div>
         <div id="show-amounts">
           <div class="t-amount">
             <h3>Total Income</h3>
-            <p>0</p>
+            <p id="total-income">0</p>
           </div>
-          <div>
+          <div style="text-align: center;">
             <h3>Total Expense</h3>
-            <p>0</p>
+            <p id="total-expenses">0</p>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
       </table>
     </div>
   </section>
-  
+
   </main>
 
   <script src="app.js"></script>

@@ -40,6 +40,7 @@
   padding: 0.7rem;
   font-size: 1rem;
   outline: none;
+  border-radius: 0.5rem;
 }
 
 #name{
@@ -47,6 +48,7 @@
   font-size: 1rem;
   outline: none;
   margin-left: 2rem;
+  border-radius: 0.5rem;
 }
 
 #amount{
@@ -54,15 +56,18 @@
   font-size: 1rem;
   outline: none;
   margin-left: 1rem;
+  border-radius: 0.5rem;
 }
 
 #submit-btn{
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
   outline: none;
+  border-radius: 0.5rem;
 }
 
 #show-amounts{
+  margin-top: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,6 +122,11 @@ table, th, td {
   th, td {
     font-size:1rem;
     padding: 1rem ;
+  }
+
+  #show-amounts{
+    margin-top: 2rem;
+    
   }
   
 }
