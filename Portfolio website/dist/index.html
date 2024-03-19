@@ -12,19 +12,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="bg-[url(./media/header.png)] h-[100vh] bg-blend- bg-cover bg-no-repeat bg-center relative w-[100%]">
+  <header class="bg-[url(./media/header.png)] h-[100vh] bg-blend- bg-cover bg-no-repeat bg-center relative w-[100%]" id="home">
 
-    <nav class="flex justify-around md:justify-evenly h-[5rem] items-center relative z-10">
+    <nav class="flex justify-around md:justify-evenly h-[5rem] items-center relative z-10 ">
       <div>
         <h2 class="font-serif text-2xl text-white tracking-wider">Arshdeepweb</h2>
       </div>
-      <div class="hidden md:block">
-        <ul class="flex gap-6 font-sans text-md text-white">
-          <li class="hover:text-yellow-200 cursor-pointer">Home</li>
-          <li class="hover:text-yellow-200 cursor-pointer">About</li>
-          <li class="hover:text-yellow-200 cursor-pointer">Skills</li>
-          <li class="hover:text-yellow-200 cursor-pointer">Projects</li>
-          <li class="hover:text-yellow-200 cursor-pointer">Contact</li>
+      <div class=" md:block hidden transition delay-300 duration-400 ease-in-out" id="nav-link">
+        <ul class="flex gap-6 font-sans text-md text-white flex-col h-0 md:mt-[-0.8rem] md:flex-row " >
+          <li class="hover:text-yellow-200 cursor-pointer"><a href="#home">Home</a></li>
+          <li class="hover:text-yellow-200 cursor-pointer"><a href="#about">About</a></li>
+          <li class="hover:text-yellow-200 cursor-pointer"><a href="#skills">Skills</a></li>
+          <li class="hover:text-yellow-200 cursor-pointer"><a href="#projects">Projects</a></li>
+          <li class="hover:text-yellow-200 cursor-pointer"><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="gap-3 text-md hidden md:block">
@@ -33,7 +33,7 @@
         <span class="mr-5 text-white"><i class="fa-brands fa-instagram"></i></span>
         <span class=" text-white"><i class="fa-brands fa-twitter"></i></span>
       </div>
-      <div class="md:hidden ">
+      <div class="md:hidden " id="ham-burger">
         <button class="text-xl px-4 py-3 rounded-md bg-[#E4CB86]"><i class="fa-solid fa-bars"></i></button>
       </div>
     </nav>
@@ -48,7 +48,7 @@
 
 
   <main>
-    <section class="bg-[#181818]">
+    <section class="bg-[#181818]" id="about">
       <div class="flex flex-col justify-center items-center md:items-start  p-4 md:px-[10rem] py-8">
         <h2 class="text-4xl font-serif text-[#E4CB86]"><u>About Me</u></h2>
         <p class="text-lg font-sans text-white mt-[2rem] text-center md:text-justify">Hey there! I'm Arshdeep Singh and front-end developer with a passion for building awesome digital experiences. My journey started back in 2022 when I began studying Diploma in Computer Science & Engineering at Government Polytechnic College. Since then, I've been on a mission to explore Software Engineering fields, from Designing, Freelancing, Blogging, SEO and Entrepreneurship. Along the way, I've dived into cutting-edge technologies like Javascript, Figma, React JS, Wordpress, and Deployment.</p>
@@ -59,7 +59,7 @@
     </section>
 
 
-    <section class="bg-[#181818]">
+    <section class="bg-[#181818]" id="projects">
         <div class="flex flex-col justify-center items-center md:items-start  p-4 md:px-[10rem] py-8">
           <h2 class="text-4xl font-serif text-[#E4CB86] my-6">Projects</h2>
           <p class="text-white mt-[-1rem]">Check out some of my work</p>
@@ -87,7 +87,7 @@
           <p class="text-lg font-sans text-white mt-[2rem] text-center md:text-justify">This Weather App website is made using HTML, CSS, Javascript.... </p>
           <div class="flex justify-evenly">
             <button class="text-lg hover:text-[#E4CB86] text-black py-2 px-4 bg-[#E4CB86] hover:bg-transparent border-2 border-[#E4CB86] hover:border-white border-solid  rounded-md mr-5 mt-4"><a href="https://weathernote.netlify.app/">Demo</a></button>
-            <button class="text-lg hover:text-[#E4CB86] text-black py-2 px-4 bg-[#E4CB86] hover:bg-transparent border-2 border-[#E4CB86] hover:border-white border-solid  rounded-md mt-4">G<a href="https://github.com/arshdeepweb/javascript-projects">Get Code</a></button>
+            <button class="text-lg hover:text-[#E4CB86] text-black py-2 px-4 bg-[#E4CB86] hover:bg-transparent border-2 border-[#E4CB86] hover:border-white border-solid  rounded-md mt-4"><a href="https://github.com/arshdeepweb/javascript-projects">Get Code</a></button>
           </div>
         </div>
 
@@ -125,7 +125,7 @@
         </div>
     </section>
 
-    <section class="bg-[#181818]">
+    <section class="bg-[#181818]" id="skills">
       <div class="flex flex-col justify-center items-center md:items-start  p-4 md:px-[10rem] py-8">
         <h2 class="text-4xl font-serif text-[#E4CB86] my-6">Skills</h2>
         <p class="text-white mt-[-1rem]">This are the technologies I've worked with</p>
@@ -165,7 +165,7 @@
       </div>
     </section>
 
-    <section class="bg-[#181818]">
+    <section class="bg-[#181818]" id="contact">
       <div class="flex flex-col justify-center items-center md:items-start  p-4 md:px-[10rem] py-8">
         <h2 class="text-4xl font-serif text-[#E4CB86] my-6">Contact Me</h2>
         <p class="text-white mt-[-1rem]">Submit the form below to get in touch with me</p>
@@ -184,5 +184,27 @@
     </section>
    
   </main>
+
+
+  <hr class="text-slate-500">
+
+  <footer class="bg-[#181818]">
+    <div class="w-full p-4 md:py-8 flex justify-evenly">
+      <div>
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://arshdeepweb.vercel.app/" class="hover:underline">arshdeepweb</a>. All Rights Reserved.</span>
+
+      </div>
+        
+        <div class="gap-3 text-md md:block">
+          <span class="mr-5 text-white"><i class="fa-brands fa-github"></i></span>
+          <span class="mr-5 text-white"><i class="fa-brands fa-linkedin"></i></span>
+          <span class="mr-5 text-white"><i class="fa-brands fa-instagram"></i></span>
+          <span class=" text-white"><i class="fa-brands fa-twitter"></i></span>
+        </div>
+    </div>
+</footer>
+
+
+  <script src="app.js"></script>
 </body>
 </html>
