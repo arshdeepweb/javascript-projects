@@ -34,48 +34,83 @@
   </navbar>
 
   <main>
-    <section class="flex justify-evenly table-sec">
-      <div>
-        <div>
-          <table>
-            <thead>
-              <tr>
-                <th>Images</th>
-                <th>Product</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Remove</th>
-              </tr>
-            </thead>
-            <tbody>
-              <td><img src="../media/p-1.jpg" alt="" width="150px"></td>
-              <td>Product 1</td>
-              <td>Fjallraven - Foldsack No. 1 Backpack</td>
-              <td>99$</td>
-              <td>X</td>
-            </tbody>
-          </table>
+    <div class="sm:h-screen bg-gray-100 py-20">
+      <h1 class="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+      <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+
+
+        <div class="rounded-lg md:w-2/3">
+          <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+
+            <div class="text-right sm:hidden">
+              <p class="text-xl">X</p>
+              
+            </div>
+
+            <img src="../media/p-1.jpg" alt="product-image" class="w-full rounded-lg sm:w-40" />
+            <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+              <div class="mt-5 sm:mt-0">
+                <h2 class="text-lg font-bold text-gray-900">Nike Air Max 2019</h2>
+                <p class="mt-1 text-xs text-gray-700">259.000 ₭</p>
+              </div>
+              <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+                
+                <div class="text-right hidden sm:inline-block">
+                  <p class="text-xl">X</p>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+
+            <div class="text-right sm:hidden">
+              <p class="text-xl">X</p>
+              
+            </div>
+
+            <img src="../media/p-1.jpg" alt="product-image" class="w-full rounded-lg sm:w-40" />
+            <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+              <div class="mt-5 sm:mt-0">
+                <h2 class="text-lg font-bold text-gray-900">Nike Air Max 2019</h2>
+                <p class="mt-1 text-xs text-gray-700">259.000 ₭</p>
+              </div>
+              <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+                
+                <div class="text-right hidden sm:inline-block">
+                  <p class="text-xl">X</p>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- Sub total -->
+        <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+          <div class="mb-2 flex justify-between">
+            <p class="text-gray-700">Subtotal</p>
+            <p class="text-gray-700">$129.99</p>
+          </div>
+          <div class="flex justify-between">
+            <p class="text-gray-700">Shipping</p>
+            <p class="text-gray-700">$4.99</p>
+          </div>
+          <hr class="my-4" />
+          <div class="flex justify-between">
+            <p class="text-lg font-bold">Total</p>
+            <div class="">
+              <p class="mb-1 text-lg font-bold">$134.98 USD</p>
+              <p class="text-sm text-gray-700">including VAT</p>
+            </div>
+          </div>
+          <button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button>
         </div>
       </div>
-      <div class="flex flex-col w-80% mt-10 lg:mt-8 justify-evenly border-2 border-solid border-slate-300 p-4">
-          <p class="text-sm font-medium text-slate-500 ">Product Details 0 Items</p>
-        <div class="flex justify-between my-[2px] ">
-          <p>Total MRP</p><p>99$</p>
-        </div>
-        <div class="flex justify-between my-[2px] ">
-          <p>Discount on MRP</p><p>20$</p>
-        </div>
-        <div class="flex justify-between my-[2px] ">
-          <p>Shipping Fee</p><p>10$</p>
-        </div>
-        <hr class="font-extrabold my-3">
-        <div class="flex justify-between my-[2px] ">
-          <p>Total Amount</p><p>69$</p>
-        </div>
-        <button class="py-3 my-1 text-white font-semibold bg-[#ff3f6c]">PLACE ORDER</button>
-      </div>
-    </section>
+    </div>
   </main>
+
 
   <footer class="bg-black">
     <div class="flex justify-center items-center md:justify-evenly flex-col md:flex-row">
